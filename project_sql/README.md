@@ -54,7 +54,7 @@ To identify the highest-paying roles, I filtered data analyst positions
 by average yearly salary and location, focusing on remote jobs. This
 query highlights the high paying opportunities in the field.
 
-``` {sql}
+``` sql
 WITH filtered AS (
   SELECT
     j.job_id,
