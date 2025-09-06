@@ -1,0 +1,6 @@
+/csv_files
+/sql_load
+/tests
+.DS_Store
+*.qmd
+.Rproj.user

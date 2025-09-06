@@ -1,4 +1,4 @@
-# Compensation by Level
+# Data Projects with SQL
 
 
 - [SQL projects for bio & health
@@ -6,8 +6,7 @@
   - [Motivation](#motivation)
   - [What’s here](#whats-here)
   - [Projects](#projects)
-    - [1. **Project 01 — Learn
-      SQL`project_sql/`**](#1-project-01--learn-sqlproject_sql)
+    - [1. `project_sql/` - **Learn SQL**](#1-project_sql---learn-sql)
 
 # SQL projects for bio & health data
 
@@ -25,11 +24,11 @@ other field.
 ## What’s here
 
 - Short, self-contained projects with queries and a brief write-up.
-- Examples that try to be clear rather than clever.
+- Examples that try to be presented as clear as possible.
 
 ## Projects
 
-### 1. **Project 01 — Learn SQL[`project_sql/`](project_sql/)**
+### 1. [`project_sql/`](project_sql/) - **Learn SQL**
 
 #### What this project is
 
