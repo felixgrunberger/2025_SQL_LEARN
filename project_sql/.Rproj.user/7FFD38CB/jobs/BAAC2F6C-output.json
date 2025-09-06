@@ -1,3 +1,0 @@
-[1,"==> quarto preview README.qmd --to gfm --no-watch-inputs --no-browse\n\n"]
-[1,"\u001B[1mpandoc \u001B[22m\n  to: >-\n    commonmark+autolink_bare_uris+emoji+footnotes+gfm_auto_identifiers+pipe_tables+strikeout+task_lists+tex_math_dollars\n  output-file: README.md\n  standalone: true\n  default-image-extension: png\n  toc: false\n  \n\u001B[1mmetadata\u001B[22m\n  title: Compensation by Level\n  fig-cap-location: bottom\n  \n"]
-[1,"Output created: README.md\n\n\u001B[32mWatching files for changes\u001B[39m\n\u001B[32mBrowse at \u001B[39m\u001B[4m\u001B[32mhttp://localhost:5952/\u001B[39m\u001B[24m\n"]
