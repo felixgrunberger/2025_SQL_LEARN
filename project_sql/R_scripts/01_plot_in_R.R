@@ -1,10 +1,15 @@
+# load libraries ----
 library(here)
 library(tidyverse)
 library(scales)
 library(showtext)
 library(vroom)
-# Nice font
-#font_add_google("Inter", "inter"); showtext_auto()
+
+
+# Add font
+font_add_google("Inter", "inter"); showtext_auto()
+
+# Save and plot file  
 png(filename=here("figures/01_compensation_by_job.png"),width = 2000,height = 1000)
 ggplot(vroom(here("csv/01_table.csv")) %>% 
          slice_max(mean_salary, n = 20, with_ties = FALSE) %>% 
