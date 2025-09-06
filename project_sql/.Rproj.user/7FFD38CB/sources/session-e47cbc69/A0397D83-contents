@@ -1,0 +1,53 @@
+---
+title: "Impact of changed c-di-AMP levels and hypo-osmotic stress on the transcriptome of *Haloferax volcanii* and on RCK domain containing proteins"
+author: | 
+  | Hongcheng Ren<sup>1</sup>, Frank Braun<sup>1</sup>, Felix Grünberger<sup>2</sup>, Chris van der Does<sup>1</sup>, Dina Grohmann<sup>2</sup>, Sonja-Verena Albers<sup>1°</sup>  
+  <sup>1</sup> Molecular Biology of Archaea, Institute of Biology, University of Freiburg, Germany 
+  <sup>2</sup> Microbiology and Archaea Center, University of Regensburg, Regensburg, Germany  
+    <sup>°</sup> Corresponding author: Sonja-Verena Albers (sonja.albers@biology.uni-freiburg.de)
+
+output:
+  github_document:
+    toc: true
+    toc_depth: 4
+ 
+  highlight: github
+link-citations: true
+always_allow_html: true
+
+---
+
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+*********  
+  
+
+The repository is currently actively developed.  
+
+[![Active Development](https://img.shields.io/badge/Maintenance%20Level-Actively%20Developed-brightgreen.svg)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d)
+
+### Repository organization
+
+This repository is organized as follows:
+
+- [`Rscripts/`](Rscripts): R code used for the analysis.  
+- [`data/`](data): Contains additional data mentioned in Rscripts 
+
+
+### Data availability 
+RNA sequencing data are available at the European Nucleotide Archive (ENA, https://www.ebi.ac.uk/ena) under project accession number PRJEB94923. 
+
+
+
+### License
+This project is licensed under the MIT. See the [`LICENSE`](LICENSE) file for more details.
+

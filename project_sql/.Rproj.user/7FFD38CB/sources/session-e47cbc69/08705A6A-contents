@@ -1,0 +1,69 @@
+library(here)
+library(tidyverse)
+library(scales)
+library(showtext)
+library(vroom)
+
+# Font
+font_add_google("Inter", "inter"); showtext_auto()
+
+# ---- data ----
+set_d <- vroom(here("csv/01_table.csv"))
+
+# per-level stats for ordering/labels
+lev_stats <- set_d %>%
+  group_by(level) %>%
+  summarise(
+    n   = n(),
+    med = median(mean_salary, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  mutate(level_lab = paste0(level, "  (n=", n, ")"))
+
+# attach stats to each row; order levels by median
+plot_d <- set_d %>%
+  left_join(lev_stats, by = "level") %>%
+  mutate(level_lab = fct_reorder(level_lab, med))
+
+# a robust upper bound (avoid letting extreme outliers crush the scale)
+x_top <- quantile(plot_d$mean_salary, 0.95, na.rm = TRUE) * 1.1
+
+# ---- plot ----
+ggplot(
+  plot_d,
+  aes(y = level_lab, x = mean_salary)
+) +
+  geom_boxplot(
+    varwidth = TRUE,              # width ~ sqrt(n)
+    width = 0.6,
+    outlier.alpha = 0.15,
+    linewidth = 0.7,
+    fill = "white",
+    color = "grey20"
+  ) +
+  # median dot
+  stat_summary(fun = median, geom = "point", size = 2.4, color = "black") +
+  scale_x_continuous(
+    labels = label_dollar(),
+    breaks = breaks_pretty(n = 6),
+    expand = expansion(mult = c(0, .05))
+  ) +
+  coord_cartesian(xlim = c(0, x_top)) +   # trims view without dropping data
+  labs(
+    title = "Compensation by Level",
+    subtitle = "Box = IQR, line & dot = median; width reflects sample size",
+    x = "Yearly salary",
+    y = NULL,
+    caption = "Source: job_postings_fact"
+  ) +
+  theme_minimal(base_family = "inter") +
+  theme(
+    plot.title        = element_text(face = "bold", size = 18, color = "grey15"),
+    plot.subtitle     = element_text(size = 12, color = "grey35"),
+    axis.text         = element_text(size = 11, color = "grey20"),
+    panel.grid.minor  = element_blank(),
+    panel.grid.major.y= element_blank(),
+    panel.grid.major.x= element_line(linetype = "dashed", linewidth = 0.3, color = "grey75"),
+    axis.title.x      = element_text(margin = margin(t = 10)),
+    plot.margin       = margin(12, 18, 12, 12)
+  )
