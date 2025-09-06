@@ -95,3 +95,5 @@ SELECT *
 FROM by_title
 ORDER BY median_salary DESC;
 ```
+
+![01_compensation](figures/01_compensation_by_job.png){width=100%}

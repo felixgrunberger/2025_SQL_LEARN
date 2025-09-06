@@ -3,7 +3,7 @@
     "path": "~/Documents/VSCode/2025_SQL_LEARN/project_sql/01_plot_in_R.R",
     "project_path": "01_plot_in_R.R",
     "type": "r_source",
-    "hash": "3872159689",
+    "hash": "2908820206",
     "contents": "",
     "dirty": false,
     "created": 1757158561875.0,
@@ -13,15 +13,15 @@
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "66,0",
-        "scrollLine": "18"
+        "cursorPosition": "69,0",
+        "scrollLine": "45"
     },
     "folds": "",
-    "lastKnownWriteTime": 1757163817,
+    "lastKnownWriteTime": 1757182505,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1757163817757,
+    "last_content_update": 1757182505690,
     "read_only": false,
     "read_only_alternatives": []
 }

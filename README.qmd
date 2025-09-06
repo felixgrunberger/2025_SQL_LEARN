@@ -1,0 +1,14 @@
+---
+title: "Compensation by Level"
+format:
+  gfm:              # GitHub-flavored markdown
+    toc: false
+    fig-cap-location: bottom
+output-file: README # <— key: writes README.md
+execute:
+  echo: false
+  warning: false
+  message: false
+---  
+
+# Hi!  
