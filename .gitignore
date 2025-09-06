@@ -2,3 +2,4 @@
 /sql_load
 /tests
 .DS_Store
+*.qmd
